@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.basmaalqethamiexamtvshow.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_localFragment"
+            app:destination="@id/localFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_apiFragment"
+            app:destination="@id/apiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/apiFragment"
+        android:name="com.example.basmaalqethamiexamtvshow.ApiFragment"
+        android:label="fragment_api"
+        tools:layout="@layout/fragment_api" >
+        <action
+            android:id="@+id/action_apiFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/localFragment"
+        android:name="com.example.basmaalqethamiexamtvshow.LocalFragment"
+        android:label="fragment_local"
+        tools:layout="@layout/fragment_local" >
+        <action
+            android:id="@+id/action_localFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>
